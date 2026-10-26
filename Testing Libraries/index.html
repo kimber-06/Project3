@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. Load the external Matter.js library first -->
+    <script src="matter.js"></script>
+    <script src="sketch.js"></script>
+
+    <!-- 2. Write your custom code in a separate script block -->
+    <script>
+      // module aliases
+      let Engine = Matter.Engine,
+          Render = Matter.Render,
+          Runner = Matter.Runner,
+          Bodies = Matter.Bodies,
+          Composite = Matter.Composite;
+
+      // create an engine
+      let engine = Engine.create();
+
+      // create a renderer
+      let render = Render.create({
+        element: document.body,
+        engine: engine
+      });
+
+      // create two boxes and a ground
+      let boxA = Bodies.rectangle(400, 200, 80, 80);
+      let boxB = Bodies.rectangle(450, 50, 80, 80);
+      let ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+      let circle = Bodies.circle(400, 100, 40);
+
+      // add all of the bodies to the world
+      Composite.add(engine.world, [boxA, boxB, ground]);
+      Composite.add(engine.world, [circle, boxA, boxB, ground]);
+
+      // run the renderer
+      Render.run(render);
+
+      // create runner
+      let runner = Runner.create();
+
+      // run the engine
+      Runner.run(runner, engine);
+
+
+
+      document.addEventListener("keydown", function (event) {
+  let keyCode = event.keyCode;
+  let position = boxA.position;
+  let speed = 5; // set the speed of movement
+
+  // move the body based on the key pressed
+  if (keyCode === 37) {
+    // move left
+    Matter.Body.translate(boxA, { x: -speed, y: 0 });
+  } else if (keyCode === 38) {
+    // move up
+    Matter.Body.translate(boxA, { x: 0, y: -speed });
+  } else if (keyCode === 39) {
+    // move right
+    Matter.Body.translate(boxA, { x: speed, y: 0 });
+  } else if (keyCode === 40) {
+    // move down
+    Matter.Body.translate(boxA, { x: 0, y: speed });
+    }
+});
+
+document.body.addEventListener("mousedown", (event) => {
+  const { x, y } = event;
+  const newBody = Bodies.rectangle(x, y, 50, 50);
+  World.add(engine.world, newBody);
+});
+
+Events.on(engine, "collisionStart", (event) => {
+  const pairs = event.pairs;
+
+  for (let i = 0; i < pairs.length; i++) {
+    const pair = pairs[i];
+
+    if (pair.bodyA === boxA && pair.bodyB === circle) {
+      // Game over
+      alert("Game over!");
+      window.location.reload(true);
+    }
+  }
+});
+    </script>
+    
+  </body>
+</html>
