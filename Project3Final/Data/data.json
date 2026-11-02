@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Iron Lung",
+    "month": "February",
+    "genre": "Horror",
+    "runtime": "Over_90_min",
+    "location": "Theater"
+  },
+  {
+    "title": "Devil Wears Prada",
+    "month": "May",
+    "genre": "Drama",
+    "runtime": "Over_90_min",
+    "location": "Streaming"
+  },
+  {
+    "title": "Sugar Kisses ",
+    "month": "May",
+    "genre": "Drama",
+    "runtime": "Over_60_min",
+    "location": "Streaming"
+  },
+  {
+    "title": "Devil Wears Prada 2",
+    "month": "May",
+    "genre": "Drama ",
+    "runtime": "Over_90_min",
+    "location": "Theater"
+  },
+  {
+    "title": "Pizza Movie",
+    "month": "June",
+    "genre": "Comedy",
+    "runtime": "Over_90_min",
+    "location": "Streaming"
+  },
+  {
+    "title": "Backrooms",
+    "month": "June",
+    "genre": "Horror",
+    "runtime": "Over_90_min",
+    "location": "Theater"
+  },
+  {
+    "title": "Leviticus",
+    "month": "June",
+    "genre": "Horror",
+    "runtime": "Over_60_min",
+    "location": "Theater"
+  },
+  {
+    "title": "Project Hail Mary",
+    "month": "July",
+    "genre": "Sci-Fi",
+    "runtime": "Over_90_min",
+    "location": "Streaming"
+  },
+  {
+    "title": "Memento ",
+    "month": "July ",
+    "genre": "Sci-Fi",
+    "runtime": "Over_90_min",
+    "location": "Streaming"
+  },
+  {
+    "title": "Spider-Man: Brand New Day",
+    "month": "August",
+    "genre": "Action",
+    "runtime": "Over_90_min",
+    "location": "Theater"
+  },
+  {
+    "title": "You Can See Everything",
+    "month": "October",
+    "genre": "Documentary",
+    "runtime": "Over_120_min",
+    "location": "Theater"
+  },
+  {
+    "title": "La Strada",
+    "month": "October",
+    "genre": "Tragedy",
+    "runtime": "Over_90_min",
+    "location": "Streaming"
+  }
+]
