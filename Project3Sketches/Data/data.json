@@ -14,7 +14,7 @@
     "location": "Streaming"
   },
   {
-    "title": "Sugar Kisses ",
+    "title": "Sugar Kisses",
     "month": "May",
     "genre": "Drama",
     "runtime": "Over_60_min",
@@ -23,7 +23,7 @@
   {
     "title": "Devil Wears Prada 2",
     "month": "May",
-    "genre": "Drama ",
+    "genre": "Drama",
     "runtime": "Over_90_min",
     "location": "Theater"
   },
@@ -56,8 +56,8 @@
     "location": "Streaming"
   },
   {
-    "title": "Memento ",
-    "month": "July ",
+    "title": "Memento",
+    "month": "July",
     "genre": "Sci-Fi",
     "runtime": "Over_90_min",
     "location": "Streaming"
